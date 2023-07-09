@@ -21,6 +21,16 @@ def search_reddit_posts(keyword, subreddit='all', limit=500):
                     posts.append({'title': post['title'], 'author': post['author'], 'score': post['score'], 'id': post['id']})
 
     return posts
+
+# So this function is the backbone since it returns posts based on keywords which in the case of our problem should be the business_tags that 
+# the user inputs through user_input function -- check colab Market Discovery.ipynb 
+# Now we have to take the posts and loop through each one of them, grab the id of the post through the api and feed this as iput to the 
+#reddit-comments-from-post-trends.py
+
+
+
+
+                    
 """
 Not needed as we would be running this on Colab, we need the function only
 
