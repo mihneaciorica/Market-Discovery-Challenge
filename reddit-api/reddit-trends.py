@@ -1,4 +1,5 @@
 import requests
+from textblob import TextBlob
 
 # Set up API credentials and parameters
 client_id = 'CLIENT_ID'
@@ -20,6 +21,8 @@ def search_reddit_posts(keyword, subreddit='all', limit=500):
                     posts.append({'title': post['title'], 'author': post['author'], 'score': post['score'], 'id': post['id']})
 
     return posts
+"""
+Not needed as we would be running this on Colab, we need the function only
 
 # Usage of the module
 if __name__ == '__main__':
@@ -36,3 +39,4 @@ if __name__ == '__main__':
         print(f"Score: {post['score']}")
         print(f"ID: {post['id']}")
         print('-' * 50)
+"""
